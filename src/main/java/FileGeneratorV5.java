@@ -22,8 +22,6 @@ public class FileGeneratorV5 {
             return;
         }
 
-        System.out.println();
-
         String folderPath = args[0];
         int totalFiles = Integer.parseInt(args[1]);
         Files.createDirectories(Paths.get(folderPath));
@@ -65,7 +63,7 @@ public class FileGeneratorV5 {
         long hours   = (duration / (1000 * 60 * 60));
 
         System.out.printf(
-                "\nGenerated %d files in %02d:%02d:%02d.%03d (hh:mm:ss.SSS) at %s%n",
+                "\nGenerated %d files in %dh %dm %ds %dms at %s%n",
                 totalFiles, hours, minutes, seconds, millis, folderPath
         );
     }
